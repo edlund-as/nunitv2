@@ -19,7 +19,7 @@ namespace NUnit.Core
 
         static ActionsHelper()
         {
-            _ActionInterfaceType = Type.GetType(NUnitFramework.TestActionInterface);
+            _ActionInterfaceType = NUnitFramework.FrameworkAssembly.GetType(NUnitFramework.TestActionInterface);
         }
 
         public static void ExecuteActions(ActionPhase phase, IEnumerable<TestAction> actions, ITest test)
