@@ -102,8 +102,8 @@ namespace NUnit.Core
                     foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
                     {
                         AssemblyName name = assembly.GetName();
-                        if ((name.Name == "nunit.framework" && name.Version.Major == 2) ||
-                            name.Name == "NUnitLite")
+                        if (name.Name == "nunit.framework" && name.Version.Major == 2 ||
+                            name.Name == "NUnitLite" && name.Version.Major == 1)
                         {
                             frameworkAssembly = assembly;
                             break;
